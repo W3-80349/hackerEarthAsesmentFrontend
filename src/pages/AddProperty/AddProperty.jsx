@@ -1,4 +1,3 @@
-// src/pages/AddProperty/AddProperty.js
 import React, { useState, useEffect } from 'react';
 import './AddProperty.css';
 import axios from 'axios';
@@ -17,7 +16,7 @@ const AddProperty = () => {
     pincode: '',
     latitude: '',
     longitude: '',
-    numberOfLikes: ''
+    price: ''
   });
 
   const [isFormValid, setIsFormValid] = useState(false);
@@ -36,7 +35,7 @@ const AddProperty = () => {
         pincode,
         latitude,
         longitude,
-        numberOfLikes
+        price
       } = property;
 
       const isValid =
@@ -51,7 +50,7 @@ const AddProperty = () => {
         pincode &&
         latitude &&
         longitude &&
-        numberOfLikes;
+        price;
 
       setIsFormValid(isValid);
     };
@@ -167,7 +166,7 @@ const AddProperty = () => {
           <input type="text" name="longitude" value={property.longitude} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>price:</label>
+          <label>Price:</label>
           <input type="number" name="price" value={property.price} onChange={handleChange} required />
         </div>
         <div className="form-buttons">
