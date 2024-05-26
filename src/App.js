@@ -16,7 +16,7 @@ function App() {
             <Route exact path="/signup"><Signup/></Route>
             {/* <Route exact path="/listing"><Home/></Route> */}
             <ProtectedRoute path={"/property/:id"} component={PropertyDetail} ></ProtectedRoute>
-            <ProtectedRoute path={"/addproperty"} component={AddProperty} ></ProtectedRoute>
+            <ProtectedRoute path={"/add-property"} component={AddProperty} ></ProtectedRoute>
             <ProtectedRoute path={"/home"} component={Home} ></ProtectedRoute>
             
           </Switch>
